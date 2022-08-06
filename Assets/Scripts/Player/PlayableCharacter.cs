@@ -24,8 +24,7 @@ public class PlayableCharacter : MonoBehaviour, IInputReceiver
 
     private void Update()
     {
-        if(currentDirection != Vector2.zero)
-            transform.Translate(currentDirection * speed * Time.deltaTime);
+        rigidBody2D.velocity = currentDirection * speed;
     }
 
     public InputPackage getInputPackage()
