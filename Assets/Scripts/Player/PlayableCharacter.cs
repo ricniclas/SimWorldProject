@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayableCharacter : MonoBehaviour, IInputReceiver
 {
     [SerializeField] private float speed = 5;
+    [SerializeField] private Animator playerAnimator;
     private Rigidbody2D rigidBody2D;
     private Vector2 currentDirection;
     private InputPackage inputPackage => new InputPackage(Movement, PressInteract, ReleaseInteract,
@@ -25,6 +26,39 @@ public class PlayableCharacter : MonoBehaviour, IInputReceiver
     private void Update()
     {
         rigidBody2D.velocity = currentDirection * speed;
+        setAnimator();
+    }
+
+
+    private void setAnimator()
+    {
+        Vector2 velocity = rigidBody2D.velocity;
+        playerAnimator.SetFloat(Constants.ANIMATOR_PLAYER_PARAM_SPEED, velocity.magnitude);
+        if (velocity != Vector2.zero)
+        {
+            float angle = Mathf.Atan2(velocity.x, velocity.y) * (180 / Mathf.PI);
+
+            if (angle <= 45 && angle >= -45)
+            {
+                playerAnimator.SetFloat(Constants.ANIMATOR_PLAYER_PARAM_LAST_DIRECTION, 1);
+                return;
+            }
+            if (angle < 135 && angle > 45)
+            {
+                playerAnimator.SetFloat(Constants.ANIMATOR_PLAYER_PARAM_LAST_DIRECTION, 3);
+                return;
+            }
+            if (angle >= 135 || angle <= -135)
+            {
+                playerAnimator.SetFloat(Constants.ANIMATOR_PLAYER_PARAM_LAST_DIRECTION, 0);
+                return;
+            }
+            else
+            {
+                playerAnimator.SetFloat(Constants.ANIMATOR_PLAYER_PARAM_LAST_DIRECTION, 2);
+                return;
+            }
+        }
     }
 
     public InputPackage getInputPackage()

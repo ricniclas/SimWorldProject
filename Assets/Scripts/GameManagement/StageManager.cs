@@ -10,6 +10,5 @@ public class StageManager : MonoBehaviour
     private void Start()
     {
         playableCharacter = Instantiate(playableCharacterPrefab, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0)).GetComponent<PlayableCharacter>();
-
     }
 }
