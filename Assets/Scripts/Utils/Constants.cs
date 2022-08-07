@@ -4,4 +4,5 @@ public class Constants
     public static string ANIMATOR_PLAYER_PARAM_SPEED = "Speed";
     public static string ANIMATOR_PLAYER_PARAM_HORIZONTAL = "Horizontal";
     public static string ANIMATOR_PLAYER_PARAM_VERTICAL = "Vertical";
+    public static string TAG_INTERACTABLE = "Interactable";
 }

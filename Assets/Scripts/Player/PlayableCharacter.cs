@@ -8,19 +8,14 @@ public class PlayableCharacter : MonoBehaviour, IInputReceiver
     [SerializeField] private Animator playerAnimator;
     private Rigidbody2D rigidBody2D;
     private Vector2 currentDirection;
-    private InputPackage inputPackage => new InputPackage(Movement, PressInteract, ReleaseInteract,
-            Cancel, PressStart);
+    private IInteractable currentInteractable;
+
+    private InputPackage inputPackage => new InputPackage(Movement, PressInteract, ReleaseInteract, Cancel, PressStart);
 
 
     private void Awake()
     {
         rigidBody2D = GetComponent<Rigidbody2D>();
-    }
-
-    private void Start()
-    {
-        GameManager.Instance.inputAction.addInputEvents(inputPackage);
-
     }
 
     private void Update()
@@ -61,7 +56,22 @@ public class PlayableCharacter : MonoBehaviour, IInputReceiver
         }
     }
 
-    public InputPackage getInputPackage()
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag(Constants.TAG_INTERACTABLE))
+        {
+            GameManager.Instance.stageManager.ShowAlert(true);
+            currentInteractable = collision.GetComponent<IInteractable>();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        GameManager.Instance.stageManager.ShowAlert(false);
+        currentInteractable = null;
+    }
+
+    public InputPackage GetInputPackage()
     {
         return inputPackage;
     }
@@ -78,12 +88,21 @@ public class PlayableCharacter : MonoBehaviour, IInputReceiver
 
     public void PressInteract()
     {
-        Debug.Log("Pressed Interact");
+        if (currentInteractable != null)
+        {
+            switch (currentInteractable.GetInteractableType())
+            {
+                case InteractableType.TEXT:
+                    GameManager.Instance.stageManager.ShowDialogue(currentInteractable.GetMessage());
+                    break;
+                case InteractableType.SHOP:
+                    break;
+            }
+        }
     }
 
     public void ReleaseInteract()
     {
-        Debug.Log("Released Interact");
     }
 
     public void PressStart()

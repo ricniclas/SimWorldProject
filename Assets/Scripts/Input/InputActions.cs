@@ -19,26 +19,26 @@ public class InputActions : MonoBehaviour
 
     public void Movement(InputAction.CallbackContext context)
     {
-        inputEventsList.movementEvent.Invoke(context.ReadValue<Vector2>());
+        inputEventsList.movementEvent?.Invoke(context.ReadValue<Vector2>());
     }
 
     public void Interact(InputAction.CallbackContext context)
     {
         if(context.started)
-            inputEventsList.pressedInteractEvent.Invoke();
+            inputEventsList.pressedInteractEvent?.Invoke();
         else if(context.canceled)
-            inputEventsList.releasedInteractEvent.Invoke();
+            inputEventsList.releasedInteractEvent?.Invoke();
     }
 
     public void Cancel(InputAction.CallbackContext context)
     {
         if (context.started)
-            inputEventsList.pressedCancelEvent.Invoke();
+            inputEventsList.pressedCancelEvent?.Invoke();
     }
 
     public void StartButton(InputAction.CallbackContext context)
     {
         if (context.started)
-            inputEventsList.pressedCancelEvent.Invoke();
+            inputEventsList.pressedCancelEvent?.Invoke();
     }
 }
