@@ -22,12 +22,20 @@ public class StageManager : MonoBehaviour
         GameManager.Instance.inputAction.replaceInputEvents(playableCharacter.GetInputPackage());
     }
 
-    public void ShowDialogue(string message)
+    public void ShowDialogue(DialogueContent dialogueContent)
     {
         dialogueWindow.gameObject.SetActive(true);
         GameManager.Instance.inputAction.replaceInputEvents(dialogueWindow.GetInputPackage());
-        dialogueWindow.ShowDialogue(message);
+        dialogueWindow.ShowDialogue(dialogueContent);
+    }
 
+
+    public void PickUpItem(Collectable collectable, DialogueContent dialogueContent)
+    {
+        dialogueWindow.gameObject.SetActive(true);
+        GameManager.Instance.inputAction.replaceInputEvents(dialogueWindow.GetInputPackage());
+        GameManager.Instance.inventaryManager.storeItem(collectable);
+        dialogueWindow.ShowDialogue(dialogueContent);
     }
 
     public void CloseDialogue()

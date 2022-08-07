@@ -39,6 +39,6 @@ public class InputActions : MonoBehaviour
     public void StartButton(InputAction.CallbackContext context)
     {
         if (context.started)
-            inputEventsList.pressedCancelEvent?.Invoke();
+            inputEventsList.pressedStartEvent?.Invoke();
     }
 }

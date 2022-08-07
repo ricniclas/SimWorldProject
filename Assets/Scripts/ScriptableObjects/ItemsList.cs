@@ -5,5 +5,6 @@ using UnityEngine;
 [System.Serializable]
 public class ItemsList
 {
-    public Item[] itensList;
+    public Costume[] costumesList;
+    public CollectableStored[] collectablesStored;
 }

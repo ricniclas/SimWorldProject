@@ -6,4 +6,5 @@ using UnityEngine;
 public class AllAvailableItensScriptableObject : ScriptableObject
 {
     public ItemsList allItens;
+    public int money;
 }

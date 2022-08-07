@@ -1,6 +1,6 @@
 using UnityEngine;
 [System.Serializable]
-public class Item
+public class Costume
 {
     public string name;
     public int price;

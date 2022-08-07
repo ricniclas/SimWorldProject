@@ -5,7 +5,8 @@ using UnityEngine;
 public interface IInteractable
 {
     public InteractableType GetInteractableType();
-    public string GetMessage();
+    public DialogueContent GetMessage();
+    public Collectable PickUp();
     public void OpenShop();
 
 }
@@ -13,5 +14,6 @@ public interface IInteractable
 public enum InteractableType
 {
     TEXT,
+    PICKUP,
     SHOP
 }

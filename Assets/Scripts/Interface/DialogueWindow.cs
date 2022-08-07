@@ -14,13 +14,14 @@ public class DialogueWindow : MonoBehaviour, IInputReceiver
     private InputPackage inputPackage => new InputPackage(Movement, PressInteract, ReleaseInteract,
         Cancel, PressStart);
 
-    public void ShowDialogue(string text)
+    public void ShowDialogue(DialogueContent dialogueContent)
     {
+        titleText.SetText(dialogueContent.title);
         if (typeTextCorroutine != null)
         {
             StopCoroutine(typeTextCorroutine);
         }
-        typeTextCorroutine = StartCoroutine(TypeTextCorroutine(text));
+        typeTextCorroutine = StartCoroutine(TypeTextCorroutine(dialogueContent.message));
     }
 
     private IEnumerator TypeTextCorroutine(string text)

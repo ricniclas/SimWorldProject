@@ -90,10 +90,14 @@ public class PlayableCharacter : MonoBehaviour, IInputReceiver
     {
         if (currentInteractable != null)
         {
+            currentDirection = Vector2.zero;
             switch (currentInteractable.GetInteractableType())
             {
                 case InteractableType.TEXT:
                     GameManager.Instance.stageManager.ShowDialogue(currentInteractable.GetMessage());
+                    break;
+                case InteractableType.PICKUP:
+                    GameManager.Instance.stageManager.PickUpItem(currentInteractable.PickUp(),currentInteractable.GetMessage());
                     break;
                 case InteractableType.SHOP:
                     break;

@@ -4,20 +4,24 @@ using UnityEngine;
 
 public class TextInteractable : MonoBehaviour, IInteractable
 {
-    [SerializeField] private string message;
-    InteractableType interactableType = InteractableType.TEXT;
+    [SerializeField] private DialogueContent interactableContent;
 
     public InteractableType GetInteractableType()
     {
-        return interactableType;
+        return InteractableType.TEXT;
     }
 
-    public string GetMessage()
+    public DialogueContent GetMessage()
     {
-        return message;
+        return interactableContent;
     }
 
     public void OpenShop()
     {
+    }
+
+    public Collectable PickUp()
+    {
+        return null;
     }
 }
