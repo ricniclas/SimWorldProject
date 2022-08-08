@@ -6,7 +6,7 @@ public class InventaryManager : MonoBehaviour
 {
     [SerializeField] private AllAvailableItensScriptableObject allItens;
 
-    public void storeItem(Collectable collectable)
+    public void StoreItem(Collectable collectable)
     {
         CollectableStored[] collectablesStored = allItens.allItens.collectablesStored;
         for (int i = 0; i < collectablesStored.Length; i++)
@@ -19,7 +19,7 @@ public class InventaryManager : MonoBehaviour
         }
     }
 
-    public bool sellItem(Collectable collectable)
+    public bool SellItem(Collectable collectable)
     {
         CollectableStored[] collectablesStored = allItens.allItens.collectablesStored;
         for (int i = 0; i < collectablesStored.Length; i++)
@@ -36,5 +36,29 @@ public class InventaryManager : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public Costume[] GetCostumes()
+    {
+        return allItens.allItens.costumesList;
+    }
+
+    public Costume GetCostume(int index)
+    {
+        return allItens.allItens.costumesList[index];
+    }
+
+    public CollectableStored[] GetCollectables()
+    {
+        return allItens.allItens.collectablesStored;
+    }
+
+    public CollectableStored GetCollectable(int index)
+    {
+        return allItens.allItens.collectablesStored[index];
+    }
+    public costumeType GetCurrentlyUsing()
+    {
+        return allItens.currentlyUsing;
     }
 }

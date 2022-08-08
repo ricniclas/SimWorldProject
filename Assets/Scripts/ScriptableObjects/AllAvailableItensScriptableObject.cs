@@ -7,4 +7,5 @@ public class AllAvailableItensScriptableObject : ScriptableObject
 {
     public ItemsList allItens;
     public int money;
+    public costumeType currentlyUsing;
 }

@@ -11,9 +11,6 @@ public class StageManager : MonoBehaviour
     [SerializeField] private DialogueWindow dialogueWindow;
     private PlayableCharacter playableCharacter;
 
-
-
-
     private void Start()
     {
         GameManager.Instance.stageManager = this;
@@ -34,7 +31,7 @@ public class StageManager : MonoBehaviour
     {
         dialogueWindow.gameObject.SetActive(true);
         GameManager.Instance.inputAction.replaceInputEvents(dialogueWindow.GetInputPackage());
-        GameManager.Instance.inventaryManager.storeItem(collectable);
+        GameManager.Instance.inventaryManager.StoreItem(collectable);
         dialogueWindow.ShowDialogue(dialogueContent);
     }
 
