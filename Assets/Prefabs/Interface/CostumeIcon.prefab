@@ -350,6 +350,13 @@ MonoBehaviour:
     price: 0
     icon: {fileID: 0}
     unlocked: 0
+  collectableStored:
+    collectable:
+      collectableName: 
+      collectableType: 0
+    amountStored: 0
+    price: 0
+    icon: {fileID: 0}
 --- !u!114 &4308149771197168623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,7 +418,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8249163552718417138
 RectTransform:
   m_ObjectHideFlags: 0

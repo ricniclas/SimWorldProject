@@ -8,6 +8,7 @@ public class PocketHandler : MonoBehaviour
     [SerializeField] private GameObject collectablePrefab;
     [SerializeField] private GameObject costumesParent;
     [SerializeField] private GameObject collectableParent;
+    [SerializeField] private bool isInShop;
     private IconHandler[] costumeIconHandlers;
     private IconHandler[] collectableIconHandlers;
 
@@ -29,7 +30,7 @@ public class PocketHandler : MonoBehaviour
         for (int i = 0; i < costumeIconHandlers.Length; i++)
         {
             IconHandler iconHandler = Instantiate(costumePrefab, costumesParent.transform).GetComponent<IconHandler>();
-            iconHandler.UpdateCostumeValues(i,false);
+            iconHandler.UpdateCostumeValues(i,isInShop);
             costumeIconHandlers[i] = iconHandler;
         }
     }
@@ -53,7 +54,7 @@ public class PocketHandler : MonoBehaviour
     {
         for (int i = 0; i < costumeIconHandlers.Length; i++)
         {
-            costumeIconHandlers[i].UpdateCostumeValues(i,false);
+            costumeIconHandlers[i].UpdateCostumeValues(i,isInShop);
         }
     }
 

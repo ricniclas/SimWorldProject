@@ -10,7 +10,9 @@ public class StageManager : MonoBehaviour
     [SerializeField] private GameObject alertGameObject;
     [SerializeField] private DialogueWindow dialogueWindow;
     [SerializeField] private GameObject pauseScreen;
-    [SerializeField] private PocketHandler pocketHandler;
+    [SerializeField] private GameObject shopScreen;
+    [SerializeField] private PocketHandler pocketHandlerPause;
+    [SerializeField] private PocketHandler PocketHandlerShop;
     private PlayableCharacter playableCharacter;
 
     private void Start()
@@ -19,6 +21,9 @@ public class StageManager : MonoBehaviour
         playableCharacter = Instantiate(playableCharacterPrefab, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0)).GetComponent<PlayableCharacter>();
         cameraObject.transform.SetParent(playableCharacter.transform);
         GameManager.Instance.inputAction.replaceInputEvents(playableCharacter.GetInputPackage());
+
+        pauseScreen.SetActive(false);
+        shopScreen.SetActive(false);
     }
 
     public void ShowDialogue(DialogueContent dialogueContent)
@@ -34,7 +39,7 @@ public class StageManager : MonoBehaviour
         dialogueWindow.gameObject.SetActive(true);
         GameManager.Instance.inputAction.replaceInputEvents(dialogueWindow.GetInputPackage());
         GameManager.Instance.inventaryManager.StoreItem(collectable);
-        pocketHandler.UpdateCollectables();
+        pocketHandlerPause.UpdateCollectables();
         dialogueWindow.ShowDialogue(dialogueContent);
     }
 
@@ -52,6 +57,11 @@ public class StageManager : MonoBehaviour
     public void TogglePause()
     {
         pauseScreen.SetActive(!pauseScreen.activeSelf);
+    }
+
+    public void ToggleShopScreen()
+    {
+        shopScreen.SetActive(!shopScreen.activeSelf);
     }
 
 

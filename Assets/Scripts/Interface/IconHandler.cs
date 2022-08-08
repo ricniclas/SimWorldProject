@@ -16,19 +16,29 @@ public class IconHandler : MonoBehaviour
 
     private void SetAllValuesCostume(bool isInShop)
     {
-        textAmount.SetText(costume.price.ToString());
-        textAmount.enabled = isInShop;
         portrait.sprite = costume.icon;
-        lockedIcon.enabled = !costume.unlocked;
-        if (costume.costumeType == GameManager.Instance.inventaryManager.GetCurrentlyUsing())
-            currentlyUsing.enabled = true;
-        else
+        if (isInShop)
+        {
+            textAmount.SetText(costume.price.ToString());
+            textAmount.enabled = true;
             currentlyUsing.enabled = false;
+            lockedIcon.enabled = costume.unlocked;
+        }
+        else
+        {
+            textAmount.enabled = false;
+            if (costume.costumeType == GameManager.Instance.inventaryManager.GetCurrentlyUsing())
+                currentlyUsing.enabled = true;
+            else
+                currentlyUsing.enabled = false;
+            lockedIcon.enabled = !costume.unlocked;
+        }
     }
 
     private void SetAllValuesCollectable()
     {
-        textAmount.SetText(collectableStored.amountStored.ToString());
+        int amount = collectableStored.amountStored;
+        textAmount.SetText(amount.ToString());
         textAmount.enabled = true;
         portrait.sprite = collectableStored.icon;
         lockedIcon.enabled = false;
