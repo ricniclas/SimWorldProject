@@ -9,6 +9,8 @@ public class StageManager : MonoBehaviour
     [SerializeField] private GameObject cameraObject;
     [SerializeField] private GameObject alertGameObject;
     [SerializeField] private DialogueWindow dialogueWindow;
+    [SerializeField] private GameObject pauseScreen;
+    [SerializeField] private PocketHandler pocketHandler;
     private PlayableCharacter playableCharacter;
 
     private void Start()
@@ -32,6 +34,7 @@ public class StageManager : MonoBehaviour
         dialogueWindow.gameObject.SetActive(true);
         GameManager.Instance.inputAction.replaceInputEvents(dialogueWindow.GetInputPackage());
         GameManager.Instance.inventaryManager.StoreItem(collectable);
+        pocketHandler.UpdateCollectables();
         dialogueWindow.ShowDialogue(dialogueContent);
     }
 
@@ -45,4 +48,11 @@ public class StageManager : MonoBehaviour
     {
         alertGameObject.SetActive(active);
     }
+
+    public void TogglePause()
+    {
+        pauseScreen.SetActive(!pauseScreen.activeSelf);
+    }
+
+
 }

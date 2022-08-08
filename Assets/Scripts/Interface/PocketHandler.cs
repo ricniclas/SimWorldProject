@@ -12,7 +12,7 @@ public class PocketHandler : MonoBehaviour
     private IconHandler[] collectableIconHandlers;
 
 
-    private void Start()
+    private void Awake()
     {
         costumeIconHandlers = new IconHandler[GameManager.Instance.inventaryManager.GetCostumes().Length];
         collectableIconHandlers = new IconHandler[GameManager.Instance.inventaryManager.GetCollectables().Length];
@@ -20,7 +20,7 @@ public class PocketHandler : MonoBehaviour
         InstantiateCollectables();
     }
 
-    public void InstantiateCostumes()
+    private void InstantiateCostumes()
     {
         foreach (Transform child in costumesParent.transform)
         {
@@ -34,7 +34,7 @@ public class PocketHandler : MonoBehaviour
         }
     }
 
-    public void InstantiateCollectables()
+    private void InstantiateCollectables()
     {
         foreach (Transform child in collectableParent.transform)
         {
@@ -54,6 +54,14 @@ public class PocketHandler : MonoBehaviour
         for (int i = 0; i < costumeIconHandlers.Length; i++)
         {
             costumeIconHandlers[i].UpdateCostumeValues(i,false);
+        }
+    }
+
+    public void UpdateCollectables()
+    {
+        for (int i = 0; i < collectableIconHandlers.Length; i++)
+        {
+            collectableIconHandlers[i].UpdateCollectableValues(i);
         }
     }
 }

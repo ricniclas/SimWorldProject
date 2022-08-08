@@ -111,6 +111,6 @@ public class PlayableCharacter : MonoBehaviour, IInputReceiver
 
     public void PressStart()
     {
-        Debug.Log("Pressed Start");
+        GameManager.Instance.stageManager.TogglePause();
     }
 }

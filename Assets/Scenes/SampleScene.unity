@@ -215,9 +215,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1482746440}
   - {fileID: 726120002}
   - {fileID: 655219037}
-  - {fileID: 1482746440}
   - {fileID: 2047989471}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -289,7 +289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7981918448209867817, guid: 9cafb54c8ee42dd4b9b4dedd99c94b58, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7981918448209867817, guid: 9cafb54c8ee42dd4b9b4dedd99c94b58, type: 3}
       propertyPath: m_AnchorMax.x
@@ -7725,7 +7725,6 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
-  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7799,26 +7798,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &519420033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AssetsPPU: 16
-  m_RefResolutionX: 320
-  m_RefResolutionY: 180
-  m_UpscaleRT: 0
-  m_PixelSnapping: 0
-  m_CropFrameX: 0
-  m_CropFrameY: 0
-  m_StretchFill: 0
 --- !u!224 &557061035 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6898359397125628443, guid: 6a32a7d92ee720f47a0501a0ff81f702, type: 3}
@@ -8104,7 +8083,7 @@ RectTransform:
   m_Children:
   - {fileID: 1307093253}
   m_Father: {fileID: 41119987}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -8144,7 +8123,7 @@ RectTransform:
   m_Children:
   - {fileID: 800522388}
   m_Father: {fileID: 41119987}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -8665,7 +8644,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1015771157}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.99999994
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -10557,6 +10536,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1349840741, guid: 7c7bbc0309199cf4c8cb95c76854ec91, type: 3}
+    - target: {fileID: 2143294595754791623, guid: d3140decddba3e54cb857f702f5acac0, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2157762255778809798, guid: d3140decddba3e54cb857f702f5acac0, type: 3}
       propertyPath: m_text
       value: Itens
@@ -10861,6 +10844,8 @@ MonoBehaviour:
   cameraObject: {fileID: 519420028}
   alertGameObject: {fileID: 726120001}
   dialogueWindow: {fileID: 2047989472}
+  pauseScreen: {fileID: 0}
+  pocketHandler: {fileID: 0}
 --- !u!4 &1440189253
 Transform:
   m_ObjectHideFlags: 0
