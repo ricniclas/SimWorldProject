@@ -15,6 +15,7 @@ public class StageManager : MonoBehaviour
     [SerializeField] private PauseController pauseController;
     [SerializeField] private DisplayWindow shopScreen;
     [SerializeField] private EventSystem eventSystem;
+    [SerializeField] private DigitalControlsManager digitalControls;
     [Header("Options Buttons")]
     private PlayableCharacter playableCharacter;
     private SpriteLibraryHolder spriteLibraryHolder;
@@ -31,6 +32,15 @@ public class StageManager : MonoBehaviour
 
         pauseScreen.gameObject.SetActive(false);
         shopScreen.gameObject.SetActive(false);
+
+        if(SystemInfo.deviceType == DeviceType.Handheld)
+        {
+            digitalControls.activateControls();
+        }
+        else
+        {
+            digitalControls.deactivateControlls();
+        }
     }
 
     public void ShowDialogue(DialogueContent dialogueContent)
