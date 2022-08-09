@@ -3,13 +3,13 @@ using UnityEngine;
 public class Costume
 {
     public string name;
-    public costumeType costumeType;
+    public CostumeType costumeType;
     public int price;
     public Sprite icon;
     public bool unlocked;
 }
 
-public enum costumeType
+public enum CostumeType
 {
     WHITE,
     BLUE,

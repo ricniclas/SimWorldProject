@@ -8,10 +8,10 @@ public class PocketHandler : MonoBehaviour
     [SerializeField] private GameObject collectablePrefab;
     [SerializeField] private GameObject costumesParent;
     [SerializeField] private GameObject collectableParent;
-    [SerializeField] private bool isInShop;
+    [SerializeField] private TMP_Text money;
     private IconHandler[] costumeIconHandlers;
     private IconHandler[] collectableIconHandlers;
-
+    public bool isInShop;
 
     private void Awake()
     {
@@ -19,6 +19,7 @@ public class PocketHandler : MonoBehaviour
         collectableIconHandlers = new IconHandler[GameManager.Instance.inventaryManager.GetCollectables().Length];
         InstantiateCostumes();
         InstantiateCollectables();
+        UpdateMoney();
     }
 
     private void InstantiateCostumes()
@@ -44,7 +45,7 @@ public class PocketHandler : MonoBehaviour
         for (int i = 0; i < collectableIconHandlers.Length; i++)
         {
             IconHandler iconHandler = Instantiate(collectablePrefab, collectableParent.transform).GetComponent<IconHandler>();
-            iconHandler.UpdateCollectableValues(i);
+            iconHandler.UpdateCollectableValues(i,isInShop);
             collectableIconHandlers[i] = iconHandler;
         }
 
@@ -62,7 +63,12 @@ public class PocketHandler : MonoBehaviour
     {
         for (int i = 0; i < collectableIconHandlers.Length; i++)
         {
-            collectableIconHandlers[i].UpdateCollectableValues(i);
+            collectableIconHandlers[i].UpdateCollectableValues(i,isInShop);
         }
+    }
+
+    public void UpdateMoney()
+    {
+        money.SetText("$ " + GameManager.Instance.inventaryManager.GetMoney().ToString());
     }
 }

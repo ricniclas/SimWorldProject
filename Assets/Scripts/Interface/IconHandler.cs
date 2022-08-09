@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class IconHandler : MonoBehaviour
 {
+    [SerializeField] private Button button;
     [SerializeField] private TMP_Text textAmount;
     [SerializeField] private Image portrait;
     [SerializeField] private Image lockedIcon;
@@ -14,7 +15,10 @@ public class IconHandler : MonoBehaviour
     public Costume costume;
     public CollectableStored collectableStored;
 
-    private void SetAllValuesCostume(bool isInShop)
+    private bool isInShop;
+    private int index;
+
+    private void SetAllValuesCostume()
     {
         portrait.sprite = costume.icon;
         if (isInShop)
@@ -48,13 +52,62 @@ public class IconHandler : MonoBehaviour
 
     public void UpdateCostumeValues(int index, bool isInShop)
     {
-        costume = GameManager.Instance.inventaryManager.GetCostume(index);
-        SetAllValuesCostume(isInShop);
+        this.index = index;
+        this.isInShop = isInShop;
+        button.onClick.RemoveAllListeners();
+        button.onClick.AddListener(costumeOnClick);
+        costume = GameManager.Instance.inventaryManager.GetCostume(this.index);
+        SetAllValuesCostume();
     }
 
-    public void UpdateCollectableValues(int index)
+    public void UpdateCollectableValues(int index, bool isInShop)
     {
-        collectableStored = GameManager.Instance.inventaryManager.GetCollectable(index);
+        this.index = index;
+        this.isInShop = isInShop;
+        collectableStored = GameManager.Instance.inventaryManager.GetCollectable(this.index);
+        button.onClick.RemoveAllListeners();
+        button.onClick.AddListener(collectableOnClick);
         SetAllValuesCollectable();
+    }
+
+    private void collectableOnClick()
+    {
+        if (isInShop)
+        {
+            if (collectableStored.amountStored <= 0)
+            {
+                Debug.Log("No Item left");
+            }
+            else
+            {
+                GameManager.Instance.inventaryManager.SellItem(index);
+            }
+        }
+    }
+
+    private void costumeOnClick()
+    {
+        if (isInShop)
+        {
+            if (costume.price <= GameManager.Instance.inventaryManager.GetMoney() && !costume.unlocked)
+            {
+                GameManager.Instance.inventaryManager.BuyCostume(index);
+            }
+            else
+            {
+                Debug.Log("No enough cash");
+            }
+        }
+        else
+        {
+            if (costume.unlocked)
+            {
+                GameManager.Instance.inventaryManager.SetNewCostume(costume.costumeType);
+            }
+            else
+            {
+                Debug.Log("Not unlocked");
+            }
+        }
     }
 }

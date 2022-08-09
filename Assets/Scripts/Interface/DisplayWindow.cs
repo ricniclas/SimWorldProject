@@ -1,18 +1,49 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class DisplayWindow : MonoBehaviour
+public class DisplayWindow : MonoBehaviour, IInputReceiver
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public Button firstSelected;
+    public PocketHandler pocketHandler;
+    private InputPackage inputPackage => new InputPackage(Movement, PressInteract, ReleaseInteract,
+        Cancel, PressStart);
+    public void Cancel()
     {
-        
+        if (pocketHandler.isInShop)
+        {
+            GameManager.Instance.stageManager.DeactivateShopScreen();
+        }
+        else
+        {
+            GameManager.Instance.stageManager.TogglePause(false);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public InputPackage GetInputPackage()
     {
-        
+        return inputPackage;
+    }
+
+    public void Movement(Vector2 movement)
+    {
+    }
+
+    public void PressInteract()
+    {
+    }
+
+    public void PressStart()
+    {
+        if (!pocketHandler.isInShop)
+        {
+            GameManager.Instance.stageManager.TogglePause(false);
+        }
+    }
+
+    public void ReleaseInteract()
+    {
     }
 }

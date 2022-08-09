@@ -21,12 +21,12 @@ MonoBehaviour:
       m_Hash: -354373004
       m_Sprite: {fileID: 1459130625, guid: 0f98ae211d51cb24399baf752593da51, type: 3}
       m_FromMain: 1
-      m_SpriteOverride: {fileID: 251963059, guid: 142904f4173cffc4484ee4784a3b00f2, type: 3}
+      m_SpriteOverride: {fileID: 1274794076, guid: 2b30488c299572f49ac47496d6ffc5fd, type: 3}
     - m_Name: Entry_0
       m_Hash: 874506106
       m_Sprite: {fileID: -229729812, guid: 0f98ae211d51cb24399baf752593da51, type: 3}
       m_FromMain: 1
-      m_SpriteOverride: {fileID: 908942424, guid: 142904f4173cffc4484ee4784a3b00f2, type: 3}
+      m_SpriteOverride: {fileID: 975206494, guid: 2b30488c299572f49ac47496d6ffc5fd, type: 3}
     m_FromMain: 1
     m_EntryOverrideCount: 2
   - m_Name: WalkDown
@@ -37,17 +37,17 @@ MonoBehaviour:
       m_Hash: -121751094
       m_Sprite: {fileID: -999795588, guid: 0f98ae211d51cb24399baf752593da51, type: 3}
       m_FromMain: 1
-      m_SpriteOverride: {fileID: 1549315518, guid: 142904f4173cffc4484ee4784a3b00f2, type: 3}
+      m_SpriteOverride: {fileID: 1388562528, guid: 2b30488c299572f49ac47496d6ffc5fd, type: 3}
     - m_Name: Player_White_3
       m_Hash: -1883698852
       m_Sprite: {fileID: -229729812, guid: 0f98ae211d51cb24399baf752593da51, type: 3}
       m_FromMain: 1
-      m_SpriteOverride: {fileID: 908942424, guid: 142904f4173cffc4484ee4784a3b00f2, type: 3}
+      m_SpriteOverride: {fileID: 975206494, guid: 2b30488c299572f49ac47496d6ffc5fd, type: 3}
     - m_Name: Player_White_1
       m_Hash: 1639409776
       m_Sprite: {fileID: 1719681000, guid: 0f98ae211d51cb24399baf752593da51, type: 3}
       m_FromMain: 1
-      m_SpriteOverride: {fileID: -1605908922, guid: 142904f4173cffc4484ee4784a3b00f2, type: 3}
+      m_SpriteOverride: {fileID: -901334397, guid: 2b30488c299572f49ac47496d6ffc5fd, type: 3}
     m_FromMain: 1
     m_EntryOverrideCount: 3
   - m_Name: IdleUp
@@ -58,12 +58,12 @@ MonoBehaviour:
       m_Hash: 299736319
       m_Sprite: {fileID: -1019136618, guid: 0f98ae211d51cb24399baf752593da51, type: 3}
       m_FromMain: 1
-      m_SpriteOverride: {fileID: -399684302, guid: 142904f4173cffc4484ee4784a3b00f2, type: 3}
+      m_SpriteOverride: {fileID: -1225529270, guid: 2b30488c299572f49ac47496d6ffc5fd, type: 3}
     - m_Name: Player_White_5
       m_Hash: 1725607017
       m_Sprite: {fileID: 115261414, guid: 0f98ae211d51cb24399baf752593da51, type: 3}
       m_FromMain: 1
-      m_SpriteOverride: {fileID: -913494097, guid: 142904f4173cffc4484ee4784a3b00f2, type: 3}
+      m_SpriteOverride: {fileID: 622714226, guid: 2b30488c299572f49ac47496d6ffc5fd, type: 3}
     m_FromMain: 1
     m_EntryOverrideCount: 2
   - m_Name: WalkUp
@@ -74,17 +74,17 @@ MonoBehaviour:
       m_Hash: -19661357
       m_Sprite: {fileID: -562694429, guid: 0f98ae211d51cb24399baf752593da51, type: 3}
       m_FromMain: 1
-      m_SpriteOverride: {fileID: 799165989, guid: 142904f4173cffc4484ee4784a3b00f2, type: 3}
+      m_SpriteOverride: {fileID: 1160525251, guid: 2b30488c299572f49ac47496d6ffc5fd, type: 3}
     - m_Name: Player_White_7
       m_Hash: -1999319739
       m_Sprite: {fileID: 115261414, guid: 0f98ae211d51cb24399baf752593da51, type: 3}
       m_FromMain: 1
-      m_SpriteOverride: {fileID: -913494097, guid: 142904f4173cffc4484ee4784a3b00f2, type: 3}
+      m_SpriteOverride: {fileID: -1225529270, guid: 2b30488c299572f49ac47496d6ffc5fd, type: 3}
     - m_Name: Player_White_7_0
       m_Hash: 855174737
       m_Sprite: {fileID: -1867546049, guid: 0f98ae211d51cb24399baf752593da51, type: 3}
       m_FromMain: 1
-      m_SpriteOverride: {fileID: 2130889650, guid: 142904f4173cffc4484ee4784a3b00f2, type: 3}
+      m_SpriteOverride: {fileID: 1839889709, guid: 2b30488c299572f49ac47496d6ffc5fd, type: 3}
     m_FromMain: 1
     m_EntryOverrideCount: 3
   - m_Name: IdleLeft
@@ -95,12 +95,12 @@ MonoBehaviour:
       m_Hash: 409718996
       m_Sprite: {fileID: 813217935, guid: 0f98ae211d51cb24399baf752593da51, type: 3}
       m_FromMain: 1
-      m_SpriteOverride: {fileID: 2136404040, guid: 142904f4173cffc4484ee4784a3b00f2, type: 3}
+      m_SpriteOverride: {fileID: -449920245, guid: 2b30488c299572f49ac47496d6ffc5fd, type: 3}
     - m_Name: Player_White_9
       m_Hash: 1869406274
       m_Sprite: {fileID: -2054724580, guid: 0f98ae211d51cb24399baf752593da51, type: 3}
       m_FromMain: 1
-      m_SpriteOverride: {fileID: 858632123, guid: 142904f4173cffc4484ee4784a3b00f2, type: 3}
+      m_SpriteOverride: {fileID: -1073691180, guid: 2b30488c299572f49ac47496d6ffc5fd, type: 3}
     m_FromMain: 1
     m_EntryOverrideCount: 2
   - m_Name: WalkLeft
@@ -111,17 +111,17 @@ MonoBehaviour:
       m_Hash: -1530979979
       m_Sprite: {fileID: 1667702845, guid: 0f98ae211d51cb24399baf752593da51, type: 3}
       m_FromMain: 1
-      m_SpriteOverride: {fileID: 1095825422, guid: 142904f4173cffc4484ee4784a3b00f2, type: 3}
+      m_SpriteOverride: {fileID: 315328874, guid: 2b30488c299572f49ac47496d6ffc5fd, type: 3}
     - m_Name: Player_White_9
       m_Hash: 1869406274
       m_Sprite: {fileID: -2054724580, guid: 0f98ae211d51cb24399baf752593da51, type: 3}
       m_FromMain: 1
-      m_SpriteOverride: {fileID: 858632123, guid: 142904f4173cffc4484ee4784a3b00f2, type: 3}
+      m_SpriteOverride: {fileID: -1073691180, guid: 2b30488c299572f49ac47496d6ffc5fd, type: 3}
     - m_Name: Player_White_11
       m_Hash: -742905373
       m_Sprite: {fileID: 2029470725, guid: 0f98ae211d51cb24399baf752593da51, type: 3}
       m_FromMain: 1
-      m_SpriteOverride: {fileID: 1843002215, guid: 142904f4173cffc4484ee4784a3b00f2, type: 3}
+      m_SpriteOverride: {fileID: -175756579, guid: 2b30488c299572f49ac47496d6ffc5fd, type: 3}
     m_FromMain: 1
     m_EntryOverrideCount: 3
   - m_Name: IdleRight
@@ -132,12 +132,12 @@ MonoBehaviour:
       m_Hash: 1253144665
       m_Sprite: {fileID: -1188038774, guid: 0f98ae211d51cb24399baf752593da51, type: 3}
       m_FromMain: 1
-      m_SpriteOverride: {fileID: 1837725526, guid: 142904f4173cffc4484ee4784a3b00f2, type: 3}
+      m_SpriteOverride: {fileID: -154888230, guid: 2b30488c299572f49ac47496d6ffc5fd, type: 3}
     - m_Name: Player_White_13
       m_Hash: 1035356367
       m_Sprite: {fileID: -703031291, guid: 0f98ae211d51cb24399baf752593da51, type: 3}
       m_FromMain: 1
-      m_SpriteOverride: {fileID: -768147238, guid: 142904f4173cffc4484ee4784a3b00f2, type: 3}
+      m_SpriteOverride: {fileID: -19737728, guid: 2b30488c299572f49ac47496d6ffc5fd, type: 3}
     m_FromMain: 1
     m_EntryOverrideCount: 2
   - m_Name: WalkRight
@@ -148,17 +148,17 @@ MonoBehaviour:
       m_Hash: -1546461844
       m_Sprite: {fileID: 1647120279, guid: 0f98ae211d51cb24399baf752593da51, type: 3}
       m_FromMain: 1
-      m_SpriteOverride: {fileID: -1408822907, guid: 142904f4173cffc4484ee4784a3b00f2, type: 3}
+      m_SpriteOverride: {fileID: -1932044880, guid: 2b30488c299572f49ac47496d6ffc5fd, type: 3}
     - m_Name: Player_White_13
       m_Hash: 1035356367
       m_Sprite: {fileID: -703031291, guid: 0f98ae211d51cb24399baf752593da51, type: 3}
       m_FromMain: 1
-      m_SpriteOverride: {fileID: -768147238, guid: 142904f4173cffc4484ee4784a3b00f2, type: 3}
+      m_SpriteOverride: {fileID: -19737728, guid: 2b30488c299572f49ac47496d6ffc5fd, type: 3}
     - m_Name: Player_White_15
       m_Hash: -724177414
       m_Sprite: {fileID: -1809019972, guid: 0f98ae211d51cb24399baf752593da51, type: 3}
       m_FromMain: 1
-      m_SpriteOverride: {fileID: -71163574, guid: 142904f4173cffc4484ee4784a3b00f2, type: 3}
+      m_SpriteOverride: {fileID: -1901235825, guid: 2b30488c299572f49ac47496d6ffc5fd, type: 3}
     m_FromMain: 1
     m_EntryOverrideCount: 3
   m_PrimaryLibraryGUID: 341fb5ac1dd02ff40a1a6f5ff22cd1c9

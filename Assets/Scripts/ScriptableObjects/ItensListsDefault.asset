@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33d74873935f5ce4594da550bb541bcc, type: 3}
-  m_Name: Itens List
+  m_Name: ItensListsDefault
   m_EditorClassIdentifier: 
   allItens:
     costumesList:
@@ -48,38 +48,38 @@ MonoBehaviour:
     - collectable:
         collectableName: Apple
         collectableType: 0
-      amountStored: 50
+      amountStored: 0
       price: 30
       icon: {fileID: 1583822129, guid: 95cf0d3a16948004097f314a5fb5be2f, type: 3}
     - collectable:
         collectableName: Grape
         collectableType: 1
-      amountStored: 50
+      amountStored: 0
       price: 30
       icon: {fileID: 1204020560, guid: 95cf0d3a16948004097f314a5fb5be2f, type: 3}
     - collectable:
         collectableName: Milk
         collectableType: 2
-      amountStored: 50
+      amountStored: 0
       price: 50
       icon: {fileID: -1349840741, guid: 7c7bbc0309199cf4c8cb95c76854ec91, type: 3}
     - collectable:
         collectableName: Mushroom
         collectableType: 3
-      amountStored: 50
+      amountStored: 0
       price: 50
       icon: {fileID: -416441017, guid: 95cf0d3a16948004097f314a5fb5be2f, type: 3}
     - collectable:
         collectableName: Lilly Pond
         collectableType: 4
-      amountStored: 50
+      amountStored: 0
       price: 80
       icon: {fileID: 1129104083, guid: 95cf0d3a16948004097f314a5fb5be2f, type: 3}
     - collectable:
         collectableName: Flower
         collectableType: 5
-      amountStored: 50
+      amountStored: 0
       price: 80
       icon: {fileID: -440804898, guid: 95cf0d3a16948004097f314a5fb5be2f, type: 3}
-  money: 10000
+  money: 0
   currentlyUsing: 0

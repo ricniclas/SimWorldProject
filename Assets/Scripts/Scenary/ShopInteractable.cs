@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShopInteractable : IInteractable
+public class ShopInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] public DialogueContent dialogueContent;
     
@@ -18,7 +18,7 @@ public class ShopInteractable : IInteractable
 
     public void OpenShop()
     {
-        GameManager.Instance.stageManager.ToggleShopScreen();
+        GameManager.Instance.stageManager.ActivateShopScreen(dialogueContent);
     }
 
     public Collectable PickUp()

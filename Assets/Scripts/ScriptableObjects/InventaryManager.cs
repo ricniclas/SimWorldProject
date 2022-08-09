@@ -14,7 +14,6 @@ public class InventaryManager : MonoBehaviour
             if(collectablesStored[i].collectable.collectableType == collectable.collectableType)
             {
                 collectablesStored[i].amountStored++;
-                Debug.Log("You have: " + collectablesStored[i].amountStored + " itens");
             }
         }
     }
@@ -57,8 +56,37 @@ public class InventaryManager : MonoBehaviour
     {
         return allItens.allItens.collectablesStored[index];
     }
-    public costumeType GetCurrentlyUsing()
+    public CostumeType GetCurrentlyUsing()
     {
         return allItens.currentlyUsing;
+    }
+
+    public void SellItem(int index)
+    {
+        allItens.allItens.collectablesStored[index].amountStored--;
+        allItens.money += allItens.allItens.collectablesStored[index].price;
+        GameManager.Instance.stageManager.UpdateCollectables();
+        GameManager.Instance.stageManager.UpdateMoney();
+    }
+
+    public void BuyCostume(int index)
+    {
+        allItens.allItens.costumesList[index].unlocked = true;
+        allItens.money -= allItens.allItens.costumesList[index].price;
+        GameManager.Instance.stageManager.UpdateCollectables();
+        GameManager.Instance.stageManager.UpdateCostumes();
+        GameManager.Instance.stageManager.UpdateMoney();
+    }
+
+    public void SetNewCostume(CostumeType costumeType)
+    {
+        allItens.currentlyUsing = costumeType;
+        GameManager.Instance.stageManager.UpdateCostumes();
+        GameManager.Instance.stageManager.SetNewCostume();
+    }
+
+    public int GetMoney()
+    {
+        return allItens.money;
     }
 }

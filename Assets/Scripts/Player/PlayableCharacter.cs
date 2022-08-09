@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.U2D.Animation;
 
 public class PlayableCharacter : MonoBehaviour, IInputReceiver
 {
     [SerializeField] private float speed = 5;
     [SerializeField] private Animator playerAnimator;
+    [SerializeField] private SpriteLibrary spriteLibrary;
     private Rigidbody2D rigidBody2D;
     private Vector2 currentDirection;
     private IInteractable currentInteractable;
@@ -16,6 +18,7 @@ public class PlayableCharacter : MonoBehaviour, IInputReceiver
     private void Awake()
     {
         rigidBody2D = GetComponent<Rigidbody2D>();
+        setSpriteLibrary();
     }
 
     private void Update()
@@ -100,6 +103,7 @@ public class PlayableCharacter : MonoBehaviour, IInputReceiver
                     GameManager.Instance.stageManager.PickUpItem(currentInteractable.PickUp(),currentInteractable.GetMessage());
                     break;
                 case InteractableType.SHOP:
+                    currentInteractable.OpenShop();
                     break;
             }
         }
@@ -111,6 +115,34 @@ public class PlayableCharacter : MonoBehaviour, IInputReceiver
 
     public void PressStart()
     {
-        GameManager.Instance.stageManager.TogglePause();
+        GameManager.Instance.stageManager.TogglePause(true);
+        currentDirection = Vector2.zero;
+    }
+
+    public void setSpriteLibrary()
+    {
+        switch (GameManager.Instance.inventaryManager.GetCurrentlyUsing())
+        {
+            case CostumeType.WHITE:
+                spriteLibrary.spriteLibraryAsset = GameManager.Instance.stageManager.GetSpriteLibraryHolder().whiteSpriteLibrary;
+                break;
+            case CostumeType.BLUE:
+                spriteLibrary.spriteLibraryAsset = GameManager.Instance.stageManager.GetSpriteLibraryHolder().blueSpriteLibrary;
+                break;
+            case CostumeType.GREEN:
+                spriteLibrary.spriteLibraryAsset = GameManager.Instance.stageManager.GetSpriteLibraryHolder().greenSpriteLibrary;
+                break;
+            case CostumeType.ORANGE:
+                spriteLibrary.spriteLibraryAsset = GameManager.Instance.stageManager.GetSpriteLibraryHolder().orangeSpriteLibrary;
+                break;
+            case CostumeType.PURPLE:
+                spriteLibrary.spriteLibraryAsset = GameManager.Instance.stageManager.GetSpriteLibraryHolder().purpleSpriteLibrary;
+                break;
+            case CostumeType.BLACK:
+                spriteLibrary.spriteLibraryAsset = GameManager.Instance.stageManager.GetSpriteLibraryHolder().blackSpriteLibrary;
+                break;
+            default:
+                break;
+        }
     }
 }

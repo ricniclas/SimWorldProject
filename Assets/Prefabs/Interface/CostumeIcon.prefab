@@ -339,6 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06a1c13d3624620468d044537f3544d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 4308149771197168623}
   textAmount: {fileID: 2962823782081134501}
   portrait: {fileID: 382772149128342499}
   lockedIcon: {fileID: 5668427453417738390}

@@ -70,6 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   playerAnimator: {fileID: 1519630958301733757}
+  spriteLibrary: {fileID: 6407408542532735580}
 --- !u!58 &5531486383507031679
 CircleCollider2D:
   m_ObjectHideFlags: 0
