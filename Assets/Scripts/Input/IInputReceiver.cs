@@ -9,4 +9,6 @@ public interface IInputReceiver
     void ReleaseInteract();
     void Cancel();
     void PressStart();
+
+    InputPackage GetInputPackage();
 }

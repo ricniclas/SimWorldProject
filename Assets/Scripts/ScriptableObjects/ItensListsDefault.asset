@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33d74873935f5ce4594da550bb541bcc, type: 3}
+  m_Name: ItensListsDefault
+  m_EditorClassIdentifier: 
+  allItens:
+    costumesList:
+    - name: White
+      costumeType: 0
+      price: 0
+      icon: {fileID: 1459130625, guid: 0f98ae211d51cb24399baf752593da51, type: 3}
+      unlocked: 1
+    - name: Blue
+      costumeType: 1
+      price: 100
+      icon: {fileID: -995677227, guid: 3159179754ecd9b4fa5f5d2f8a8510dc, type: 3}
+      unlocked: 0
+    - name: Green
+      costumeType: 2
+      price: 100
+      icon: {fileID: 251963059, guid: 142904f4173cffc4484ee4784a3b00f2, type: 3}
+      unlocked: 0
+    - name: Orange
+      costumeType: 3
+      price: 200
+      icon: {fileID: 563332615, guid: 653149cb7d28f444bbac027beb9f9e40, type: 3}
+      unlocked: 0
+    - name: Purple
+      costumeType: 4
+      price: 200
+      icon: {fileID: 1274794076, guid: 2b30488c299572f49ac47496d6ffc5fd, type: 3}
+      unlocked: 0
+    - name: Black
+      costumeType: 5
+      price: 300
+      icon: {fileID: 419634263, guid: 8d4dea38ee5891547a1e01de4c8d7609, type: 3}
+      unlocked: 0
+    collectablesStored:
+    - collectable:
+        collectableName: Apple
+        collectableType: 0
+      amountStored: 0
+      price: 30
+      icon: {fileID: 1583822129, guid: 95cf0d3a16948004097f314a5fb5be2f, type: 3}
+    - collectable:
+        collectableName: Grape
+        collectableType: 1
+      amountStored: 0
+      price: 30
+      icon: {fileID: 1204020560, guid: 95cf0d3a16948004097f314a5fb5be2f, type: 3}
+    - collectable:
+        collectableName: Milk
+        collectableType: 2
+      amountStored: 0
+      price: 50
+      icon: {fileID: -1349840741, guid: 7c7bbc0309199cf4c8cb95c76854ec91, type: 3}
+    - collectable:
+        collectableName: Mushroom
+        collectableType: 3
+      amountStored: 0
+      price: 50
+      icon: {fileID: -416441017, guid: 95cf0d3a16948004097f314a5fb5be2f, type: 3}
+    - collectable:
+        collectableName: Lilly Pond
+        collectableType: 4
+      amountStored: 0
+      price: 80
+      icon: {fileID: 1129104083, guid: 95cf0d3a16948004097f314a5fb5be2f, type: 3}
+    - collectable:
+        collectableName: Flower
+        collectableType: 5
+      amountStored: 0
+      price: 80
+      icon: {fileID: -440804898, guid: 95cf0d3a16948004097f314a5fb5be2f, type: 3}
+  money: 0
+  currentlyUsing: 0

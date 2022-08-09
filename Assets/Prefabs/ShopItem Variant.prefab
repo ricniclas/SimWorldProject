@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2117659283239765494
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5210123311751327058, guid: 614fd37582f326f4799009b6dc695d2e, type: 3}
+      propertyPath: interactableContent.title
+      value: Log
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210123311751327058, guid: 614fd37582f326f4799009b6dc695d2e, type: 3}
+      propertyPath: interactableContent.message
+      value: So log has it been...
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210123311921438289, guid: 614fd37582f326f4799009b6dc695d2e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1000893555, guid: 965fcdc9059d76843a72b3fa511ec5d5, type: 3}
+    - target: {fileID: 5210123312652877998, guid: 614fd37582f326f4799009b6dc695d2e, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210123312652877998, guid: 614fd37582f326f4799009b6dc695d2e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210123312652877998, guid: 614fd37582f326f4799009b6dc695d2e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210123312652877998, guid: 614fd37582f326f4799009b6dc695d2e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210123312652877998, guid: 614fd37582f326f4799009b6dc695d2e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210123312652877998, guid: 614fd37582f326f4799009b6dc695d2e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210123312652877998, guid: 614fd37582f326f4799009b6dc695d2e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210123312652877998, guid: 614fd37582f326f4799009b6dc695d2e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210123312652877998, guid: 614fd37582f326f4799009b6dc695d2e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210123312652877998, guid: 614fd37582f326f4799009b6dc695d2e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210123312652877998, guid: 614fd37582f326f4799009b6dc695d2e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210123312652877999, guid: 614fd37582f326f4799009b6dc695d2e, type: 3}
+      propertyPath: m_Name
+      value: ShopItem
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5210123311751327058, guid: 614fd37582f326f4799009b6dc695d2e, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 614fd37582f326f4799009b6dc695d2e, type: 3}
+--- !u!1 &6137698660881524899 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5210123311751327061, guid: 614fd37582f326f4799009b6dc695d2e, type: 3}
+  m_PrefabInstance: {fileID: 2117659283239765494}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1049910145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6137698660881524899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81812d745144225448f8444eec2b0939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueContent:
+    message: Welcome to my store!
+    title: Shop
