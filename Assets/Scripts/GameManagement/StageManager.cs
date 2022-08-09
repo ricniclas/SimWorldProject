@@ -12,8 +12,10 @@ public class StageManager : MonoBehaviour
     [SerializeField] private GameObject alertGameObject;
     [SerializeField] private DialogueWindow dialogueWindow;
     [SerializeField] private DisplayWindow pauseScreen;
+    [SerializeField] private PauseController pauseController;
     [SerializeField] private DisplayWindow shopScreen;
     [SerializeField] private EventSystem eventSystem;
+    [Header("Options Buttons")]
     private PlayableCharacter playableCharacter;
     private SpriteLibraryHolder spriteLibraryHolder;
 
@@ -24,6 +26,8 @@ public class StageManager : MonoBehaviour
         playableCharacter = Instantiate(playableCharacterPrefab, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0)).GetComponent<PlayableCharacter>();
         cameraObject.transform.SetParent(playableCharacter.transform);
         GameManager.Instance.inputAction.replaceInputEvents(playableCharacter.GetInputPackage());
+
+        InitializeButtons();
 
         pauseScreen.gameObject.SetActive(false);
         shopScreen.gameObject.SetActive(false);
@@ -63,6 +67,7 @@ public class StageManager : MonoBehaviour
         if (activate)
         {
             GameManager.Instance.inputAction.replaceInputEvents(pauseScreen.GetInputPackage());
+            pauseController.resetPauseScreen();
             eventSystem.SetSelectedGameObject(pauseScreen.firstSelected.gameObject);
         }
         else
@@ -111,5 +116,38 @@ public class StageManager : MonoBehaviour
     public void SetNewCostume()
     {
         playableCharacter.setSpriteLibrary();
+    }
+
+    public void InitializeButtons()
+    {
+        pauseController.pocketButton.onClick.AddListener(delegate {buttonAction(ButtonType.POCKET);});
+        pauseController.optionsButton.onClick.AddListener(delegate { buttonAction(ButtonType.OPTIONS); });
+        pauseController.creditsButton.onClick.AddListener(delegate { buttonAction(ButtonType.CREDITS); });
+        pauseController.exitButton.onClick.AddListener(delegate { buttonAction(ButtonType.EXIT); });
+    }
+
+    public void buttonAction(ButtonType buttonType)
+    {
+        Debug.Log("Pressed button: " + buttonType.ToString());
+        pauseController.deactivateAllScreens();
+        switch (buttonType)
+        {
+            case ButtonType.POCKET:
+                pauseController.pocketGameObject.SetActive(true);
+                eventSystem.SetSelectedGameObject(pauseScreen.firstSelected.gameObject);
+                break;
+            case ButtonType.OPTIONS:
+                pauseController.OptionsGameObject.SetActive(true);
+                eventSystem.SetSelectedGameObject(pauseController.optionsFirstButton);
+                break;
+            case ButtonType.CREDITS:
+                pauseController.creditsGameObject.SetActive(true);
+                break;
+            case ButtonType.EXIT:
+                Application.Quit();
+                break;
+            default:
+                break;
+        }
     }
 }

@@ -63,7 +63,7 @@ MonoBehaviour:
       m_Hash: 1725607017
       m_Sprite: {fileID: 115261414, guid: 0f98ae211d51cb24399baf752593da51, type: 3}
       m_FromMain: 1
-      m_SpriteOverride: {fileID: -787339007, guid: 3159179754ecd9b4fa5f5d2f8a8510dc, type: 3}
+      m_SpriteOverride: {fileID: 1976711771, guid: 3159179754ecd9b4fa5f5d2f8a8510dc, type: 3}
     m_FromMain: 1
     m_EntryOverrideCount: 2
   - m_Name: WalkUp
