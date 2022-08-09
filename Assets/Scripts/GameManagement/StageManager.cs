@@ -67,7 +67,7 @@ public class StageManager : MonoBehaviour
         if (activate)
         {
             GameManager.Instance.inputAction.replaceInputEvents(pauseScreen.GetInputPackage());
-            pauseController.resetPauseScreen();
+            //pauseController.resetPauseScreen();
             eventSystem.SetSelectedGameObject(pauseScreen.firstSelected.gameObject);
         }
         else
@@ -128,7 +128,6 @@ public class StageManager : MonoBehaviour
 
     public void buttonAction(ButtonType buttonType)
     {
-        Debug.Log("Pressed button: " + buttonType.ToString());
         pauseController.deactivateAllScreens();
         switch (buttonType)
         {

@@ -79,7 +79,7 @@ MonoBehaviour:
       m_Hash: -1999319739
       m_Sprite: {fileID: 115261414, guid: 0f98ae211d51cb24399baf752593da51, type: 3}
       m_FromMain: 1
-      m_SpriteOverride: {fileID: -1225529270, guid: 2b30488c299572f49ac47496d6ffc5fd, type: 3}
+      m_SpriteOverride: {fileID: 622714226, guid: 2b30488c299572f49ac47496d6ffc5fd, type: 3}
     - m_Name: Player_White_7_0
       m_Hash: 855174737
       m_Sprite: {fileID: -1867546049, guid: 0f98ae211d51cb24399baf752593da51, type: 3}
