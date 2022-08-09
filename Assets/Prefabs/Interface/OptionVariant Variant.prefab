@@ -9,7 +9,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1616670144820130711, guid: e6d42598390642f42bcf8ff446134d66, type: 3}
       propertyPath: m_Value
-      value: 0.244
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1616670144820130711, guid: e6d42598390642f42bcf8ff446134d66, type: 3}
+      propertyPath: m_MaxValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1616670144820130711, guid: e6d42598390642f42bcf8ff446134d66, type: 3}
+      propertyPath: m_MinValue
+      value: 0.0001
       objectReference: {fileID: 0}
     - target: {fileID: 3511597572573461208, guid: e6d42598390642f42bcf8ff446134d66, type: 3}
       propertyPath: m_Sprite
@@ -270,7 +278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5963776029201531293, guid: fe59e6fb8512e384a9a2ca59bb06d7b1, type: 3}
       propertyPath: m_Name
-      value: OptionVariant
+      value: OptionVariant Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6401770044670846265, guid: fe59e6fb8512e384a9a2ca59bb06d7b1, type: 3}
       propertyPath: m_Color.a

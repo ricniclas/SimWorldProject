@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
-    public InventaryManager inventaryManager;
     public static GameManager Instance { get; private set; }
+    public InventaryManager inventaryManager;
     public InputActions inputAction;
+    public SoundManager soundManager;
     [HideInInspector]public StageManager stageManager;
     private void Awake()
     {
